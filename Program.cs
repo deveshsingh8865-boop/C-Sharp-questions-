@@ -1,31 +1,18 @@
-﻿using System;
-
-namespace Palindrome
+﻿//Write a program of compute the sum of first N numbers (without using loop)
+using System;
+using System.Runtime.ExceptionServices;
+namespace DeveshConsoleApp1
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int n;
-            Console.WriteLine("Enter the number: ");
-            n = Convert.ToInt32(Console.ReadLine());
-            int temp = n;
-            int digt=0;
             int sum = 0;
-            while(n > 0)
-            {
-                digt =  n % 10;
-                sum = sum * 10 + digt;
-                n = n / 10;
-            }
-            if ( temp == sum)
-            {
-                Console.WriteLine("The number is  palindrome ");
-            }
-            else
-            {
-                Console.WriteLine("The given number is not a palindrome");
-            }
+            int num;
+            Console.WriteLine("Ente the Number: ");
+            num = Convert.ToInt32(Console.ReadLine());
+            sum = (num * (num + 1) / 2);
+            Console.WriteLine("The Sum of N numbers :"+sum);
         }
     }
 }
